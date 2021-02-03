@@ -23,7 +23,7 @@ var kurento = require('kurento-client');
 var argv = minimist(process.argv.slice(2), {
     default: {
         as_uri: "http://localhost:8080/",
-        ws_uri: "ws://192.168.0.74:5005/kurento"
+        ws_uri: "ws://192.168.0.74:8888/kurento"
     }
 });
 

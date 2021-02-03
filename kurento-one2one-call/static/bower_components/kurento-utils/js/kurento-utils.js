@@ -241,11 +241,19 @@
                     return pc.remoteDescription;
                 };
                 function setRemoteVideo() {
+
                     if (remoteVideo) {
                         var stream = pc.getRemoteStreams()[0];
-                        var url = stream ? URL.createObjectURL(stream) : '';
+                        console.log(stream);
+
+                        // console.log(stream);
+                        // var url = stream ? URL.createObjectURL(stream) : '';
+                        // remoteVideo.pause();
+                        // remoteVideo.src = url;
+                        var url = stream;
                         remoteVideo.pause();
-                        remoteVideo.src = url;
+                        remoteVideo.srcObject = url;
+                        // remoteVideo.load();
                         remoteVideo.load();
                         console.log('Remote URL:', url);
                     }
