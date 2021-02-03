@@ -431,6 +431,7 @@ function clearCandidatesQueue(sessionId) {
 function onIceCandidate(sessionId, _candidate) {
     var candidate = kurento.register.complexTypes.IceCandidate(_candidate);
     var user = userRegistry.getById(sessionId);
+    debugger;
 
     if (pipelines[user.id] && pipelines[user.id].webRtcEndpoint && pipelines[user.id].webRtcEndpoint[user.id]) {
         var webRtcEndpoint = pipelines[user.id].webRtcEndpoint[user.id];

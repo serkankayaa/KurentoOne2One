@@ -214,51 +214,7 @@ function incomingCall(message) {
 	}
 
 	setCallState(PROCESSING_CALL);
-	setTimeout(() => {
-		doConfirm(message);
-	}, 1000);
-	// if (confirm('User ' + message.from
-	// 		+ ' is calling you. Do you accept the call?')) {
-	// 	showSpinner(videoInput, videoOutput);
-
-	// 	var options = {
-	// 		localVideo : videoInput,
-	// 		remoteVideo : videoOutput,
-	// 		onicecandidate : onIceCandidate
-	// 	}
-
-	// 	webRtcPeer = kurentoUtils.WebRtcPeer.WebRtcPeerSendrecv(options,
-	// 			function(error) {
-	// 				if (error) {
-	// 					console.error(error);
-	// 					setCallState(NO_CALL);
-	// 				}
-
-	// 				this.generateOffer(function(error, offerSdp) {
-	// 					if (error) {
-	// 						console.error(error);
-	// 						setCallState(NO_CALL);
-	// 					}
-	// 					var response = {
-	// 						id : 'incomingCallResponse',
-	// 						from : message.from,
-	// 						callResponse : 'accept',
-	// 						sdpOffer : offerSdp
-	// 					};
-	// 					sendMessage(response);
-	// 				});
-	// 			});
-
-	// } else {
-	// 	var response = {
-	// 		id : 'incomingCallResponse',
-	// 		from : message.from,
-	// 		callResponse : 'reject',
-	// 		message : 'user declined'
-	// 	};
-	// 	sendMessage(response);
-	// 	stop(true);
-	// }
+	setTimeout(function () { doConfirm(message) }, 3000);
 }
 
 function register() {

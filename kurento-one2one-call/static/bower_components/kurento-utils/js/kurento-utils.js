@@ -241,17 +241,17 @@
                     return pc.remoteDescription;
                 };
                 function setRemoteVideo() {
-
                     if (remoteVideo) {
                         var stream = pc.getRemoteStreams()[0];
-                        console.log(stream);
+                        console.log("asadds");
+                        console.log(url);
 
                         // console.log(stream);
                         // var url = stream ? URL.createObjectURL(stream) : '';
                         // remoteVideo.pause();
                         // remoteVideo.src = url;
                         var url = stream;
-                        remoteVideo.pause();
+                        // remoteVideo.pause();
                         remoteVideo.srcObject = url;
                         // remoteVideo.load();
                         remoteVideo.load();
